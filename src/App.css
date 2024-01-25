@@ -1,21 +1,5 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.appHeader {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +8,235 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.appHeaderText {
+  color: #ebb061;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+  margin: 0;
+  background-color: #ebb061;
+}
+
+.topNav {
+  padding: 0 1em;
+}
+
+.headliner {
+  font-size: 2em;
+  color: #282c34;
+  text-decoration: none;
+  margin-left: 1em;
+}
+
+.headliner h1 {
+  font-weight: 300;
+}
+
+.aboveFold {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background-color: #282c34;
+  color: #ebb061;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.aboveFoldWords {
+  /* background-image: url("../src/images/herLogo.png");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  padding: 0 1em;
+}
+
+.aboveFoldWords h3 {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+
+.aboveFoldWords p {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.aboveFoldWords a {
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.aboveFoldWords button {
+  background-color: #ebb061;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  cursor: pointer;
+}
+
+.aboveFoldWords button:hover {
+  /* background-color: #618feb; */
+  color: white;
+  border: #282c34;
+}
+
+.homeImg {
+  display: flex;
+  height: 40em;
+  align-items: center;
+  margin-right: 4em;
+  margin: 0 auto;
+}
+
+.homeSplashImages {
+  display: block;
+  max-width: 350px;
+  height: auto;
+  border-radius: 4px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 135px;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  margin: 1em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 135px;
+  background-color: #ebb061;
+  color: #282c34;
+}
+
+footer a {
+  text-decoration: none;
+  color: #282c34;
+}
+
+.hamburger {
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 1em;
+}
+
+.mobileNav {
+  display: none;
+  position: absolute;
+  top: 155px;
+  right: 0;
+  background-color: #ebb061;
+  width: 100%;
+  height: 90%;
+  z-index: 1;
+}
+
+.visible {
+  display: block !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.routes {
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.mobileRoutes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  font-size: 20px;
+  text-decoration: none;
+  color: #282c34;
+}
+
+.route {
+  color: #282c34;
+  padding: 0.5em;
+  margin: 0 1em;
+  border-right: #ebb061 2px solid;
+  border-left: #ebb061 2px solid;
+  border-top: #ebb061 2px solid;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.active {
+  border: 2px solid #282c34;
+  border-radius: 4px;
+}
+
+#founderSection > div {
+  display: flex;
+  padding: 1em 0;
+  width: 100%;
+  justify-content: space-around;
+  /* background-color: #ebb061;
+  color: #282c34; */
+}
+
+#founderSection > div > div {
+  width: 50%;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+#founderSection button {
+  background-color: #282c34;
+  color: #ebb061;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  cursor: pointer;
+}
+
+#founderSection > div:nth-child(2n) {
+  text-align: end;
+}
+
+#founderSection > div:nth-last-child(-n + 2) {
+  background-color: #282c34;
+  color: #ebb061;
+}
+
+#founderSection > div:nth-last-child(-n + 2) button {
+  background-color: #ebb061;
+  color: #282c34;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  #founderSection > div > img {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 860px) {
+  .active {
+    border: none;
   }
 }
