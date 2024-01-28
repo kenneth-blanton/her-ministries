@@ -43,9 +43,6 @@ body {
 }
 
 .aboveFoldWords {
-  /* background-image: url("../src/images/herLogo.png");
-  background-repeat: no-repeat;
-  background-size: cover; */
   max-width: 1000px;
   height: auto;
   display: block;
@@ -178,6 +175,62 @@ footer a {
   font-size: 20px;
 }
 
+.routeContainer {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.routeContainer a {
+  margin: 0;
+}
+
+.routeContainer:hover a {
+  padding: 0.5em;
+  border: #282c34 2px solid;
+  border-radius: 4px;
+}
+
+.routeContainer:hover .aboutDropdown {
+  color: aqua;
+  display: block;
+
+  a {
+    color: #282c34;
+    padding: 12px 4px;
+    text-decoration: none;
+    display: block;
+    text-align: start;
+    border: none;
+  }
+}
+
+.routeContainer:hover svg {
+  transform: rotate(180deg);
+  content: " ";
+}
+
+.aboutDropdown {
+  display: none;
+  position: absolute;
+  background-color: #ebb061;
+  border: #282c34 2px solid;
+  border-top: none;
+  padding: 0.5em 0.9em 0 0.3em;
+  border-radius: 0 0 4px 4px;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.aboutDropdown a {
+  color: #282c34;
+  padding: 12px 4px;
+  text-decoration: none;
+  display: block;
+  text-align: start;
+}
+
 .active {
   border: 2px solid #282c34;
   border-radius: 4px;
@@ -198,7 +251,7 @@ footer a {
   margin: 0.5em 0;
 }
 
-#founderSection button {
+#founderSection a {
   background-color: #282c34;
   color: #ebb061;
   border: none;
@@ -207,6 +260,7 @@ footer a {
   font-size: 1.5em;
   margin: 0.5em 0;
   cursor: pointer;
+  text-decoration: none;
 }
 
 #founderSection > div:nth-child(2n) {
@@ -218,7 +272,7 @@ footer a {
   color: #ebb061;
 }
 
-#founderSection > div:nth-last-child(-n + 2) button {
+#founderSection > div:nth-last-child(-n + 2) a {
   background-color: #ebb061;
   color: #282c34;
   border: none;
@@ -229,14 +283,85 @@ footer a {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1100px) {
+#about-page {
+  position: relative;
+  margin: auto;
+  /* padding: 1em 3em; */
+  color: #ebb061;
+}
+
+#about-page div {
+  background-color: #282c34;
+  padding: 2em 2em;
+}
+
+.mySlides {
+  border-bottom: #ebb061 2px solid;
+}
+
+.mySlides > div {
+  display: flex;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  /* margin-top: -22px; */
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  /* transition: 0.6s ease; */
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  border-radius: 3px 0 0 3px;
+  left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
   #founderSection > div > img {
     display: none;
+  }
+
+  .headliner {
+    content: url("../src/images/mainLogo.png");
+    width: 100px;
+    height: 100px;
+    margin: 1em;
   }
 }
 
 @media screen and (max-width: 860px) {
   .active {
     border: none;
+  }
+
+  .headliner {
+    font-size: 1em;
   }
 }

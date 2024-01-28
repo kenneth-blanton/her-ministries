@@ -1,7 +1,7 @@
 import { Outlet, NavLink, useLocation, Link } from "react-router-dom";
 import mainLogo from "../images/mainLogo.png";
 import CheckWindowWidth from "../functions/checkWindowWidth";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Root() {
@@ -95,9 +95,31 @@ export default function Root() {
             <NavLink to="/" className="route">
               HOME
             </NavLink>
-            <NavLink to="/about" className="route">
-              ABOUT
-            </NavLink>
+            <div className="routeContainer">
+              <NavLink to="/about" className="route">
+                ABOUT{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width={20}
+                  height={20}
+                  fill="#282c34"
+                >
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg>
+              </NavLink>
+              <div className="aboutDropdown">
+                <Link to="/about/mission" className="aboutDropdownRoute">
+                  MISSION
+                </Link>
+                <Link to="/about/vision" className="aboutDropdownRoute">
+                  VISION
+                </Link>
+                <Link to="/about/service" className="aboutDropdownRoute">
+                  SERVICE
+                </Link>
+              </div>
+            </div>
             <NavLink to="/episodes" className="route">
               PODCAST EPISODES
             </NavLink>
