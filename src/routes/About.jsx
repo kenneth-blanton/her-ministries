@@ -1,5 +1,4 @@
 import { Outlet, useLocation, useNavigate, Link } from "react-router-dom";
-import herLogo from "../images/herLogo.png";
 import { useEffect, useState } from "react";
 
 export default function About() {
@@ -13,16 +12,21 @@ export default function About() {
   //   console.log(lastSegment); // Get the last segment
 
   function getInitialIndex() {
-    if (lastSegment === "mission") {
-      return 0;
-    } else if (lastSegment === "vision") {
-      return 1;
-    } else if (lastSegment === "service") {
-      return 2;
+    switch (lastSegment) {
+      case "mission":
+        return 0;
+      case "vision":
+        return 1;
+      case "ministry":
+        return 2;
+      case "founder":
+        return 3;
+      default:
+        return 0;
     }
   }
 
-  const routes = ["mission", "vision", "service"];
+  const routes = ["Mission", "Vision", "Ministry", "Founder"];
   const [currentIndex, setCurrentIndex] = useState(getInitialIndex);
 
   // mission = 0
@@ -34,7 +38,7 @@ export default function About() {
       navigate("/about/mission");
       setCurrentIndex(0);
     }
-  }, [location, currentIndex]);
+  }, [location, currentIndex, lastSegment, navigate]);
 
   return (
     <div id="about-page">
@@ -45,7 +49,10 @@ export default function About() {
           setCurrentIndex((currentIndex - 1 + routes.length) % routes.length)
         }
       >
-        &#10094;
+        &#10094;{" "}
+        {routes[currentIndex - 1]
+          ? routes[currentIndex - 1]
+          : routes[routes.length - 1]}
       </Link>
       <Link
         className="next top"
@@ -56,14 +63,33 @@ export default function About() {
         }
         onClick={() => setCurrentIndex((currentIndex + 1) % routes.length)}
       >
+        {routes[currentIndex + 1] ? routes[currentIndex + 1] : routes[0]}{" "}
         &#10095;
       </Link>
       <Outlet />
 
-      <Link className="prev bottom" onClick={{}}>
-        &#10094;
+      <Link
+        className="prev bottom"
+        to={routes[currentIndex - 1] || routes[routes.length - 1]}
+        onClick={() =>
+          setCurrentIndex((currentIndex - 1 + routes.length) % routes.length)
+        }
+      >
+        &#10094;{" "}
+        {routes[currentIndex - 1]
+          ? routes[currentIndex - 1]
+          : routes[routes.length - 1]}
       </Link>
-      <Link className="next bottom" onClick={{}}>
+      <Link
+        className="next bottom"
+        to={
+          currentIndex > routes.length - 1
+            ? "THIS DOESN'T WORK"
+            : routes[currentIndex + 1]
+        }
+        onClick={() => setCurrentIndex((currentIndex + 1) % routes.length)}
+      >
+        {routes[currentIndex + 1] ? routes[currentIndex + 1] : routes[0]}{" "}
         &#10095;
       </Link>
     </div>

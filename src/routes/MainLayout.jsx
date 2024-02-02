@@ -1,7 +1,7 @@
 import { Outlet, NavLink, useLocation, Link } from "react-router-dom";
 import mainLogo from "../images/mainLogo.png";
 import CheckWindowWidth from "../functions/checkWindowWidth";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Root() {
@@ -26,6 +26,25 @@ export default function Root() {
     {
       name: "Contact",
       path: "/contact",
+    },
+  ];
+
+  const subItems = [
+    {
+      name: "Mission",
+      path: "/about/mission",
+    },
+    {
+      name: "Vision",
+      path: "/about/vision",
+    },
+    {
+      name: "Ministry",
+      path: "/about/ministry",
+    },
+    {
+      name: "Founder",
+      path: "/about/founder",
     },
   ];
 
@@ -109,15 +128,17 @@ export default function Root() {
                 </svg>
               </NavLink>
               <div className="aboutDropdown">
-                <Link to="/about/mission" className="aboutDropdownRoute">
-                  MISSION
-                </Link>
-                <Link to="/about/vision" className="aboutDropdownRoute">
-                  VISION
-                </Link>
-                <Link to="/about/service" className="aboutDropdownRoute">
-                  SERVICE
-                </Link>
+                {subItems.map((item) => (
+                  <div key={uuidv4()}>
+                    <Link
+                      to={item.path}
+                      className="aboutDropdownRoute"
+                      key={uuidv4()}
+                    >
+                      {item.name}
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
             <NavLink to="/episodes" className="route">
