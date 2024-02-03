@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+.danger {
+  color: red;
+}
+
 .appHeader {
   background-color: var(--primary);
   display: flex;
@@ -80,6 +84,7 @@ body {
 
 .aboveFoldWords button {
   background-color: var(--secondary);
+  color: var(--primary);
   border: none;
   border-radius: 4px;
   padding: 0.5em 1em;
@@ -119,7 +124,6 @@ header {
 header img {
   width: 100px;
   height: 100px;
-  margin: 1em;
 }
 
 footer {
@@ -300,10 +304,10 @@ footer a {
   border-top: var(--primary) 4px solid;
 
   #together {
-    margin-top: 1em;
+    margin-top: 2.5em;
     width: 100%;
     max-width: 1000px;
-    margin-bottom: -7px;
+    margin-bottom: -8px;
   }
 }
 
@@ -320,13 +324,17 @@ footer a {
     color: var(--secondary);
     padding: 2em 2em 1em;
   }
+
+  p:last-child {
+    padding-bottom: 3em;
+  }
 }
 
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  width: auto;
+  width: 116px;
   padding: 16px;
   color: var(--secondary);
   background-color: var(--primary);

@@ -68,7 +68,7 @@ export default function Root() {
                 }}
                 className="headliner"
               >
-                <h1>H.E.R Ministries</h1>
+                <h1>H.E.R. Ministries</h1>
               </Link>
             )
           ) : (
@@ -79,7 +79,7 @@ export default function Root() {
               }}
               className="headliner"
             >
-              <h1>H.E.R Ministries</h1>
+              <h1>H.E.R. Ministries</h1>
             </Link>
           )}
         </>

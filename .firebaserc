@@ -3,7 +3,9 @@
   "targets": {},
   "etags": {
     "her-ministries": {
-      "extensionInstances": {}
+      "extensionInstances": {
+        "firestore-send-email": "57023cf25ad550fb54aa3c14c4e6ee70dbde725353fc4f966968e1ed60710cf1"
+      }
     }
   }
 }

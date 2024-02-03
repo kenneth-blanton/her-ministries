@@ -88,7 +88,9 @@ export default function VisionSlide() {
         {slides.map((slide, index) => (
           <div key={index} className="mySlides fade">
             {slide.type === "video" ? (
-              <video src={slide.src} alt={slide.alt} controls />
+              <video alt={slide.alt} controls>
+                <source src={slide.src} />
+              </video>
             ) : (
               <img src={slide.src} alt={slide.alt} />
             )}
