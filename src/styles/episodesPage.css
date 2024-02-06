@@ -1,0 +1,57 @@
+.episodesPage {
+  color: var(--primary);
+}
+
+.episodesPage h1 {
+  margin-left: 48px;
+}
+
+.episodesListing {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  color: var(--secondary);
+  margin: 0 16px;
+}
+
+.episode {
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.episode h2 {
+  margin-bottom: 10px;
+}
+
+.episode p {
+  margin-bottom: 20px;
+}
+
+.episodeLinks {
+  display: flex;
+  gap: 10px;
+}
+
+.episodeLinks a {
+  color: var(--secondary);
+  padding: 5px 10px;
+  background-color: #303244;
+  border: var(--secondary) 1px solid;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .episodesPage h1 {
+    margin-left: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .episodesPage h1 {
+    text-align: center;
+    margin: 0;
+  }
+}

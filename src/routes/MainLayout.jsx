@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export default function Root() {
   const location = useLocation();
+  const date = new Date();
   const [vis, setVis] = useState(false);
 
   let windowWidth = CheckWindowWidth();
@@ -161,6 +162,8 @@ export default function Root() {
         >
           Made by Code By Kenneth
         </a>
+        {/* {location.pathname == "/episodes" ? <Link>Upload</Link> : null} */}
+        <a>© {date.getFullYear()} H.E.R. Ministries. All Rights Reserved.</a>
       </footer>
     </>
   );

@@ -5,14 +5,13 @@
   border: var(--primary) 4px solid;
   margin: 0 auto;
   position: relative;
-
-  h1 {
-    font-size: calc(1.5em + 1vw);
-    margin: 20px 0;
-    font-weight: 900;
-  }
-
   color: var(--primary);
+}
+
+.contact-page h1 {
+  font-size: calc(1.5em + 1vw);
+  margin: 20px 0;
+  font-weight: 900;
 }
 
 .contact-page::before {
@@ -33,113 +32,115 @@
 form {
   text-align: center;
   padding: 0 1em;
+}
 
-  label {
-    display: flex;
-    font-size: 1.25em;
-    padding: 0 8px;
-    margin-bottom: -30px;
+form label {
+  display: flex;
+  font-size: 1.25em;
+  padding: 0 8px;
+  margin-bottom: -30px;
+  background-color: var(--secondary);
+  border: var(--primary) 1px solid;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+form input {
+  width: 100%;
+  margin: 30px 0;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 0 4px 4px 4px;
+  font-size: 1em;
+  position: relative;
+}
+
+form textarea {
+  width: 100%;
+  margin: 30px 0;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  font-size: 1em;
+  resize: none;
+}
+
+#namesWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.names {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.names:nth-of-type(2) input {
+  border-radius: 4px;
+}
+
+.names span {
+  position: absolute;
+  left: 8px;
+  bottom: 10px;
+  z-index: 1;
+}
+
+#subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+#subscribe label {
+  margin: 0;
+  padding: 1em;
+  border: var(--secondary) 1px solid;
+  background-color: var(--primary);
+  color: var(--secondary);
+  align-items: center;
+  gap: 16px;
+}
+
+#subscribe button {
+  margin: 0;
+  width: 29px;
+  height: 20px;
+  align-items: center;
+  z-index: 1;
+  background-color: var(--primary);
+  border: var(--secondary) 1px solid;
+  cursor: pointer;
+}
+
+#submitWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 30px 0;
+}
+
+#submitWrapper button {
+  padding: 10px 20px;
+  border: var(--secondary) 1px solid;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
     background-color: var(--secondary);
-    border: var(--primary) 1px solid;
-    border-bottom: none;
-    border-radius: 4px 4px 0 0;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-  }
-
-  input {
-    width: 100%;
-    margin: 30px 0;
-    padding: 10px;
-    border: 1px solid var(--primary);
-    border-radius: 0 4px 4px 4px;
-    font-size: 1em;
-    position: relative;
-  }
-
-  #namesWrapper {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
-    .names {
-      justify-content: center;
-      display: flex;
-      width: 100%;
-      position: relative;
-      margin-bottom: 16px;
-
-      span {
-        position: absolute;
-        left: 8px;
-        bottom: 10px;
-        z-index: 1;
-      }
-    }
-    :nth-of-type(2) input {
-      border-radius: 4px;
-    }
-  }
-
-  textarea {
-    width: 100%;
-    margin: 30px 0;
-    padding: 10px;
-    border: 1px solid var(--primary);
-    border-radius: 4px;
-    font-size: 1em;
-    resize: none;
-  }
-
-  #subscribe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
-
-    label {
-      margin: 0;
-      padding: 1em;
-      border: var(--secondary) 1px solid;
-      background-color: var(--primary);
-      color: var(--secondary);
-      align-items: center;
-      gap: 16px;
-    }
-    button {
-      margin: 0;
-      width: 29px;
-      height: 20px;
-      align-items: center;
-      z-index: 1;
-      background-color: var(--primary);
-      border: var(--secondary) 1px solid;
-      cursor: pointer;
-    }
-  }
-
-  #submitWrapper {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin: 30px 0;
-
-    button {
-      padding: 10px 20px;
-      border: var(--secondary) 1px solid;
-      border-radius: 4px;
-      background-color: var(--primary);
-      color: var(--secondary);
-      font-size: 1em;
-      cursor: pointer;
-      transition: 0.3s;
-      &:hover {
-        background-color: var(--secondary);
-        color: var(--primary);
-      }
-    }
+    color: var(--primary);
   }
 }
 

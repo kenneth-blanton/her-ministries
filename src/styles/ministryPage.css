@@ -2,19 +2,19 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
+}
 
-  video {
-    max-width: 320px;
-    height: auto;
-    margin: 3em 0 0em;
-    border-radius: 4px;
-  }
+.slideshow-container video {
+  max-width: 320px;
+  height: auto;
+  margin: 3em 0 0em;
+  border-radius: 4px;
+}
 
-  img {
-    max-width: 320px;
-    height: auto;
-    margin: 3em 0 0em;
-  }
+.slideshow-container img {
+  max-width: 320px;
+  height: auto;
+  margin: 3em 0 0em;
 }
 
 .mySlides {

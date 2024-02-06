@@ -2,6 +2,7 @@ import herLogo from "../images/herLogo.png";
 import outlineBG from "../images/i9xUri01.svg";
 // import outlineBG from "../images/image-removebg-preview.png";
 import logoNoBG from "../images/logoNoBG.png";
+import "../App.css";
 
 export default function MissionSlide() {
   return (

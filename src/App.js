@@ -8,6 +8,8 @@ import VisionSlide from "./routes/VisionSlide.jsx";
 import ServiceSlide from "./routes/ServiceSlide.jsx";
 import FounderSlide from "./routes/Founder.jsx";
 import Contact from "./routes/Contact.jsx";
+import Episodes from "./routes/Episodes.jsx";
+import Admin from "./routes/Admin.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -27,6 +29,8 @@ const router = createBrowserRouter(
         <Route path="founder" element={<FounderSlide />} />
       </Route>
       <Route path="contact" element={<Contact />} />
+      <Route path="episodes" element={<Episodes />} />
+      <Route path="admin" element={<Admin />} />
 
       <Route path="*" element={<NotFound />} />
     </Route>

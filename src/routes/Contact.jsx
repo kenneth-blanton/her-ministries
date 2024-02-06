@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "../styles/contact.css";
 import prayerBanner from "../images/prayerBanner.webp";
 import { db } from "../db/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 
 export default function Contact() {
   const [newsletterChecked, setNewsletterChecked] = useState(false);
@@ -148,18 +148,30 @@ export default function Contact() {
   }
 
   async function subscriber() {
-    await addDoc(collection(db, "subscribers"), {
-      firstName,
-      lastName,
-      email,
-    }).catch((error) => {
-      console.error("Error adding document: ", error);
+    const q = query(collection(db, "subscribers"), where("email", "==", email));
+    const querySnapshot = await getDocs(q);
+    if (!querySnapshot.empty) {
       setMessage(
         <div className="error">
-          Error Subscribing To Newsletter. Try Again Please.
+          You are already subscribed to the newsletter.
         </div>
       );
-    });
+      return;
+    } else {
+      await addDoc(collection(db, "subscribers"), {
+        firstName,
+        lastName,
+        email,
+      }).catch((error) => {
+        console.error("Error adding document: ", error);
+        setMessage(
+          <div className="error">
+            Error Subscribing To Newsletter. You're already subscribed. Please
+            try again.
+          </div>
+        );
+      });
+    }
   }
 
   return (
