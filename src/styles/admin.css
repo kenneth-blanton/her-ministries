@@ -1,0 +1,39 @@
+.adminPage {
+  text-align: center;
+}
+
+.adminHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.adminHeader button {
+  padding: 0.5em 1em;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: var(--secondary) 1px solid;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.notLogged div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.loggedIn form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.loggedIn button {
+  padding: 4px 8px;
+  color: var(--secondary);
+  background-color: var(--primary);
+  border: var(--secondary) 1px solid;
+  font-size: 18px;
+}

@@ -1,0 +1,60 @@
+.storePage {
+  text-align: center;
+  color: var(--primary);
+}
+
+.storePage h1 {
+  color: var(--secondary);
+}
+
+.itemListing {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  color: var(--primary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.item {
+  background-color: var(--secondary);
+  border-radius: 5px;
+  padding: 20px;
+  border: var(--primary) 1px solid;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.item h2 {
+  background: linear-gradient(to right, #034bb0, #cb6be6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.item p {
+  background: linear-gradient(to right, #034bb0, #cb6be6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.item a:hover {
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+  -webkit-text-fill-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.item a {
+  background: linear-gradient(to right, #034bb0, #cb6be6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding: 5px 10px;
+  border: var(--primary) 1px solid;
+  border-radius: 4px;
+  text-decoration: none;
+}

@@ -1,0 +1,448 @@
+:root {
+  --primary: #282c34;
+  --secondary: #ebb061;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.danger {
+  color: red;
+}
+
+.appHeader {
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.appHeaderText {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+}
+
+.topNav {
+  padding: 0 1em;
+  /* background-color: var(--secondary); */
+  border-top: var(--secondary) 4px solid;
+  border-bottom: var(--secondary) 4px solid;
+}
+
+.headliner {
+  font-size: 2em;
+  color: var(--secondary);
+  text-decoration: none;
+  margin-left: 1em;
+  white-space: nowrap;
+}
+
+.headliner h1 {
+  font-weight: 500;
+}
+
+.aboveFold {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+  color: var(--secondary);
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.aboveFoldWords {
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  padding: 0 1em;
+}
+
+.aboveFoldWords h3 {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+
+.aboveFoldWords p {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.aboveFoldWords div {
+  display: flex;
+  gap: 2em;
+}
+
+.aboveFoldWords div div {
+  border-radius: 4px;
+  margin: 0.5em 0;
+  background-color: var(--secondary);
+}
+
+.aboveFoldWords a {
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-size: 1.5em;
+  background: linear-gradient(to right, #034bb0, #cb6be6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  border: var(--secondary) 2px solid;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboveFoldWords a:hover {
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+  -webkit-text-fill-color: var(--secondary);
+
+  color: var(--secondary);
+  border: var(--secondary) 2px solid;
+}
+
+.homeImg {
+  display: flex;
+  height: 40em;
+  align-items: center;
+  margin-right: 4em;
+  margin: 0 auto;
+}
+
+.homeSplashImages {
+  display: block;
+  max-width: 350px;
+  height: auto;
+  border-radius: 4px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 135px;
+}
+
+header img {
+  width: 110px;
+  height: 100px;
+}
+
+footer {
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 135px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  flex-wrap: wrap;
+}
+
+footer a {
+  margin: 0 auto;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.hamburger {
+  width: 2.5em;
+  height: 2.5em;
+  margin-right: 1em;
+}
+
+.mobileNav {
+  display: none;
+  position: absolute;
+  top: 155px;
+  right: 0;
+  background-color: var(--secondary);
+  width: 100%;
+  height: 90%;
+  z-index: 2;
+}
+
+.visible {
+  display: block !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.routes {
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.mobileRoutes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.route {
+  color: var(--secondary);
+  padding: 0.5em;
+  margin: 0 1em;
+  border-right: rgba(0, 0, 0, 0) 2px solid;
+  border-left: rgba(0, 0, 0, 0) 2px solid;
+  /* border-top: var(--secondary) 2px solid; */
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.route svg {
+  fill: var(--secondary);
+}
+
+.routeContainer {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.routeContainer:hover .route {
+  border: var(--secondary) 2px solid;
+  border-radius: 4px 4px 0 0;
+}
+
+.routeContainer:hover .aboutDropdown {
+  display: block;
+  margin-top: 10px;
+  left: 20px;
+}
+
+.routeContainer:hover svg {
+  transform: rotate(180deg);
+  content: " ";
+  fill: var(--secondary);
+}
+
+.aboutDropdown {
+  position: absolute;
+  display: none;
+  width: 117px;
+  border: var(--secondary) 2px solid;
+  font-size: 20px;
+  border-radius: 0 0 4px 4px;
+  z-index: 1;
+  background-color: var(--secondary);
+}
+
+.aboutDropdown a {
+  background: linear-gradient(to right, #034bb0, #cb6be6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  display: block;
+  border: none;
+  text-align: start;
+  padding: 8px 0 8px 10px;
+  font-weight: 600;
+}
+
+.aboutDropdown a:hover {
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+  -webkit-text-fill-color: var(--secondary);
+
+  color: var(--secondary);
+}
+
+.active {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  border-radius: 4px;
+}
+
+#founderSection > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#founderSection > div > div {
+  max-width: 1000px;
+  padding: 1.5em 1em;
+  margin: 0.5em 0;
+}
+
+#founderSection a {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#founderSection > div:nth-last-child(-n + 2) {
+  background: linear-gradient(
+    90deg,
+    hsla(215, 97%, 35%, 1) 0%,
+    hsla(287, 71%, 66%, 1) 100%
+  );
+  color: var(--secondary);
+}
+
+#founderSection > div:nth-last-child(-n + 2) a {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+  margin: 0.5em 0;
+  cursor: pointer;
+}
+
+#about-page {
+  position: relative;
+  margin: auto;
+  font-size: 1.5em;
+  color: var(--primary);
+  text-align: center;
+  background-color: var(--secondary);
+}
+
+#about-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    hsla(215, 97%, 35%, 1) 0%,
+    hsla(287, 71%, 66%, 1) 100%
+  );
+}
+
+#together {
+  margin-top: 2.5em;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: -8px;
+}
+
+#about-page a {
+  text-decoration: none;
+}
+
+.aboutDesc {
+  background: linear-gradient(90deg, #034bb0 50%, #cb6be6 50%);
+}
+
+.aboutDesc p {
+  margin: 0 auto;
+  max-width: 1000px;
+  color: var(--secondary);
+  padding: 2em 2em 1em;
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+}
+
+.aboutDesc p:last-child {
+  padding-bottom: 3em;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: 116px;
+  padding: 16px;
+  color: var(--secondary);
+  font-size: 18px;
+  /* border-radius: 0 3px 3px 0; */
+  user-select: none;
+  z-index: 1;
+}
+
+/* Position the "next button" to the right */
+.next {
+  background-color: #cb6be6;
+  right: 0;
+}
+
+.prev {
+  background-color: #034bb0;
+  left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover {
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+}
+.next:hover {
+  background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+@media screen and (max-width: 1414px) {
+  .aboveFold {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .aboveFoldWords div {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #founderSection > div > img {
+    display: none;
+  }
+
+  .headliner {
+    content: url("../src/images/mainLogo.png");
+    width: 110px;
+    height: 100px;
+    margin: 1em;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .topNav a:first-child {
+    border: none !important;
+  }
+  .active {
+    border: var(--primary) 2px solid;
+    color: var(--primary);
+  }
+
+  .headliner a {
+    border: none !important;
+    font-size: 1em;
+  }
+}
