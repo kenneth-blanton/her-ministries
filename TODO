@@ -16,3 +16,8 @@ Feb 8, 2024:
 Feb 9, 2024:
   ☐ Begin Stripe integration
   
+Feb 18, 2024:
+  ✔ Fix Admin to username and password login. Keep login in state @done(24-02-18 12:03)
+  ✔ Add Events tab under About dropdown. @done(24-02-18 12:03)
+  ✔ Add Ability to Make Events in Admin Portal @done(24-02-18 23:32)
+  ✔ Add Image Upload @done(24-02-18 23:32)

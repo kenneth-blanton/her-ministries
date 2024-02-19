@@ -21,12 +21,14 @@ export default function About() {
         return 2;
       case "founder":
         return 3;
+      case "events":
+        return 4;
       default:
         return 0;
     }
   }
 
-  const routes = ["Mission", "Vision", "Ministry", "Founder"];
+  const routes = ["Mission", "Vision", "Ministry", "Founder", "Events"];
   const [currentIndex, setCurrentIndex] = useState(getInitialIndex);
 
   // mission = 0
@@ -37,6 +39,12 @@ export default function About() {
     if (lastSegment === "about") {
       navigate("/about/mission");
       setCurrentIndex(0);
+    }
+    console.log(lastSegment);
+    if (lastSegment === "Events" || lastSegment === "events") {
+      document.getElementById("about-page").style.background = "transparent";
+    } else {
+      document.getElementById("about-page").style.background = "#ebb061";
     }
   }, [location, currentIndex, lastSegment, navigate]);
 

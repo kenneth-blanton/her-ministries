@@ -54,16 +54,19 @@ export default function Root() {
       name: "Founder",
       path: "/about/founder",
     },
-    // {
-    //   name: "Events",
-    //   path: "/about/events",
-    // },
+    {
+      name: "Events",
+      path: "/about/events",
+    },
   ];
 
   return (
     <>
       <div className="appHeader">
         <span className="appHeaderText">HEALED.EMPOWERED.RESTORED</span>
+        <Link to={"/admin"} className="adminLogin">
+          Admin
+        </Link>
       </div>
       <header className="topNav">
         <>
@@ -178,9 +181,9 @@ export default function Root() {
           Made by Code By Kenneth
         </a>
         {/* {location.pathname == "/episodes" ? <Link>Upload</Link> : null} */}
-        <a href="#">
+        <span>
           © {date.getFullYear()} H.E.R. Ministries. All Rights Reserved.
-        </a>
+        </span>
       </footer>
     </>
   );

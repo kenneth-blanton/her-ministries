@@ -1,27 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NotLogged from "../components/notLogged.jsx";
 import LoggedIn from "../components/LoggedIn.jsx";
 import "../styles/admin.css";
+import { auth } from "../db/firebase";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
 export default function Admin() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
 
-  function logOut() {
-    console.log("Logging out...");
-    setIsLoggedIn(false);
-  }
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
 
   return (
     <div className="adminPage">
       <div className="adminHeader">
         <h1>Admin Page</h1>
-        <button onClick={logOut}>Log Out</button>
+        <button
+          onClick={() => {
+            auth.signOut().then(() => {
+              console.log(auth.currentUser);
+            });
+          }}
+        >
+          Log Out
+        </button>
       </div>
 
-      {isLoggedIn ? (
-        <LoggedIn isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      {user ? (
+        <LoggedIn auth={auth} />
       ) : (
-        <NotLogged isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <NotLogged
+          auth={auth}
+          signInWithEmailAndPassword={signInWithEmailAndPassword}
+        />
       )}
     </div>
   );

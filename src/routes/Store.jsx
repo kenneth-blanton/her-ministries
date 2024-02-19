@@ -28,6 +28,7 @@ export default function Store() {
         {items.map((item, index) => {
           return (
             <div className="item" key={index}>
+              {item.image ? <img src={item.image} alt={item.title} /> : null}
               {item.title ? <h2>{item.title}</h2> : null}
               {item.desc ? <p>{item.desc}</p> : null}
               {item.link ? (

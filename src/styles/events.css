@@ -1,13 +1,16 @@
-.storePage {
+.eventsPage {
+  font-size: 0.6667em;
   text-align: center;
   color: var(--primary);
 }
 
-.storePage h1 {
+.eventsPage h1 {
   color: var(--secondary);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.itemListing {
+.eventListing {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -17,7 +20,7 @@
   margin: 0 auto;
 }
 
-.item {
+.event {
   background-color: var(--secondary);
   border-radius: 5px;
   padding: 20px;
@@ -25,13 +28,13 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-.item img {
+.event img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-.item h2 {
+.event h2 {
   background: linear-gradient(to right, #034bb0, #cb6be6);
   -webkit-background-clip: text;
   background-clip: text;
@@ -39,7 +42,7 @@
   margin-bottom: 10px;
 }
 
-.item p {
+.event p {
   background: linear-gradient(to right, #034bb0, #cb6be6);
   -webkit-background-clip: text;
   background-clip: text;
@@ -47,13 +50,19 @@
   margin-bottom: 20px;
 }
 
-.item a:hover {
+.eventLinks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.eventLinks a:hover {
   background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
   -webkit-text-fill-color: var(--secondary);
   color: var(--secondary);
 }
 
-.item a {
+.eventLinks a {
   background: linear-gradient(to right, #034bb0, #cb6be6);
   -webkit-background-clip: text;
   background-clip: text;

@@ -29,6 +29,15 @@
   font-weight: 600;
 }
 
+.adminLogin {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.75em;
+}
+
 body {
   margin: 0;
   background: linear-gradient(90deg, #034bb0 0%, #cb6be6 100%);
@@ -150,6 +159,12 @@ footer {
 }
 
 footer a {
+  margin: 0 auto;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+footer span {
   margin: 0 auto;
   text-decoration: none;
   color: var(--primary);
