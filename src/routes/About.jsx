@@ -23,12 +23,14 @@ export default function About() {
         return 3;
       case "events":
         return 4;
+      case "team":
+        return 5;
       default:
         return 0;
     }
   }
 
-  const routes = ["Mission", "Vision", "Ministry", "Founder", "Events"];
+  const routes = ["Mission", "Vision", "Ministry", "Founder", "Events", "Team"];
   const [currentIndex, setCurrentIndex] = useState(getInitialIndex);
 
   // mission = 0

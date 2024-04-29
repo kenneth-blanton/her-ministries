@@ -34,7 +34,7 @@ export default function CreateEvent() {
       await addDoc(collection(db, "events"), {
         title: eventTitle,
         desc: eventDesc,
-        link: eventDesc,
+        link: eventLink,
         dateCreated: new Date(),
       }).then((docRef) => {
         setEventLoading(true);

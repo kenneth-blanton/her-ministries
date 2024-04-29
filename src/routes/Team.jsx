@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
-
-export default function Founder() {
+export default function Team() {
   return (
     <div id="founderSection">
-      <div>
+      <h2>Coming Soon</h2>
+      {/* <div>
         <div>
           <h2>Dianna Williams McBride</h2>
           <h2>A Beacon of Hope and Healing</h2>
@@ -45,7 +44,6 @@ export default function Founder() {
             safe space where they can walk in healing, empowerment, and
             restoration.
           </p>
-          <Link to="/about/vision">Get Involved</Link>
         </div>
       </div>
 
@@ -61,9 +59,8 @@ export default function Founder() {
             Ministries, women are empowered to live purposeful and fulfilling
             lives, and to become the best versions of themselves.
           </p>
-          <Link to="/contact">Connect</Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

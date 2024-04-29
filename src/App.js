@@ -8,6 +8,7 @@ import VisionSlide from "./routes/VisionSlide.jsx";
 import ServiceSlide from "./routes/ServiceSlide.jsx";
 import FounderSlide from "./routes/Founder.jsx";
 import Events from "./routes/Events.jsx";
+import Team from "./routes/Team.jsx";
 import Contact from "./routes/Contact.jsx";
 import Episodes from "./routes/Episodes.jsx";
 import Store from "./routes/Store.jsx";
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
         <Route path="ministry" element={<ServiceSlide />} />
         <Route path="founder" element={<FounderSlide />} />
         <Route path="events" element={<Events />} />
+        <Route path="team" element={<Team />} />
       </Route>
       <Route path="contact" element={<Contact />} />
       <Route path="episodes" element={<Episodes />} />
