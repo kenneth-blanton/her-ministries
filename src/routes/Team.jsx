@@ -1,66 +1,65 @@
+import Amber from "../images/Amber Neason, Administrative Assistant.jpg";
+import Deanna from "../images/Deanna Hernandez, Volunteer Coordinator.png";
+// import Hervery from "../images/Hervery's Headshot.png";
+import Jennifer from "../images/Jennifer Colbert, Executive Administrator.jpg";
+import Latesha from "../images/Latesha Collins, Program Manager.png";
+import Linda from "../images/Linda Collins, Team Member.png";
+
 export default function Team() {
+  const width = 300;
+  const height = 300;
+
   return (
-    <div id="founderSection">
-      <h2>Coming Soon</h2>
+    <div id="teamSection">
+      <h1>Meet the Team</h1>
+
+      <div>
+        <div>
+          <h2>Jennifer Colbert</h2>
+          <p>Executive Administrator</p>
+          <img src={Jennifer} alt="Jennifer" width={width} height={400} />
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Amber Neason</h2>
+          <p>Administrative Assistant</p>
+          <img src={Amber} alt="Amber" width={width} height={height} />
+        </div>
+      </div>
+
       {/* <div>
         <div>
-          <h2>Dianna Williams McBride</h2>
-          <h2>A Beacon of Hope and Healing</h2>
-          <p>
-            Evangelist Dianna Williams McBride is an inspiring woman of God who
-            uses her gift of ministering to bring deliverance and healing to the
-            total person, mind, body, and spirit. Her mission is to provide a
-            safe place for women to heal from trauma and equip them with
-            biblical knowledge and practical application.
-          </p>
-        </div>
-      </div>
-
-      <div>
-        <div>
-          <h2>From Education to Service</h2>
-          <p>
-            Dianna is a Board-Certified Christian Counselor who received her
-            formal education from Southwestern Assemblies of God University,
-            where she specialized in Counseling and obtained a Bachelor's Degree
-            in Human Services. She is also a proud member of the National
-            Association of Christian Counselors and serves on the Ministerial
-            Staff and ECC Women's Ministry at Empowerment Community Center.
-          </p>
-        </div>
-      </div>
-
-      <div>
-        <div>
-          <h2>Healing Rooted in Faith</h2>
-          <p>
-            Dianna's work is a true testament to the scripture that "all things
-            work together for good to them that love God, to them who are the
-            called according to his purpose" (Romans 8:28). As the Founder/CEO
-            of HER Ministries, she along with her team is dedicated to providing
-            a safe and supportive environment for women to heal from the trauma
-            they have experienced. The ministry believes that every woman
-            deserves to feel secure and empowered, and it strives to create a
-            safe space where they can walk in healing, empowerment, and
-            restoration.
-          </p>
-        </div>
-      </div>
-
-      <div>
-        <div>
-          <h2>Empowering Women Through Support & Growth</h2>
-          <p>
-            HER Ministries provides opportunities for women to learn, grow, and
-            connect with one another through various programs and events. The
-            ministry offers counseling services, support groups, workshops, and
-            retreats that equip women with biblical knowledge and practical
-            tools to help them overcome their challenges. Through HER
-            Ministries, women are empowered to live purposeful and fulfilling
-            lives, and to become the best versions of themselves.
-          </p>
+          <h2>Latresa Hervery</h2>
+          <p>Board Member</p>
+          <img src={Hervery} alt="Hervery" width={width} height={height} />
         </div>
       </div> */}
+
+      <div>
+        <div>
+          <h2>Latesha Collins</h2>
+          <p>Program Manager</p>
+          <img src={Latesha} alt="Latesha" width={width} height={height} />
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Deanna Hernandez</h2>
+          <p>Volunteer Coordinator</p>
+          <img src={Deanna} alt="Deanna" width={width} height={height} />
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Linda Collins</h2>
+          <p>Team Member</p>
+          <img src={Linda} alt="Linda" width={width} height={height} />
+        </div>
+      </div>
     </div>
   );
 }

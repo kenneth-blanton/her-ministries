@@ -58,10 +58,10 @@ export default function Root() {
       name: "Events",
       path: "/about/events",
     },
-    // {
-    //   name: "Team",
-    //   path: "/about/team",
-    // },
+    {
+      name: "Team",
+      path: "/about/team",
+    },
   ];
 
   return (

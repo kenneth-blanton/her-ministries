@@ -332,6 +332,20 @@ footer span {
   cursor: pointer;
 }
 
+#teamSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+}
+
+#teamSection h1 {
+  padding-top: 1em;
+  font-size: 2em;
+  color: var(--primary);
+}
+
 #about-page {
   position: relative;
   margin: auto;
