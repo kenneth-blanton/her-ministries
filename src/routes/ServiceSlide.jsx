@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import herLogo from "../images/herLogo.png";
 import { v4 as uuidv4 } from "uuid";
 import "../styles/ministryPage.css";
 import firstSlide from "../images/IMG_8350t2.mov";

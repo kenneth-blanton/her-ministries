@@ -1,6 +1,5 @@
 import { Outlet, NavLink, useLocation, Link } from "react-router-dom";
-import mainLogo from "../images/mainLogo.png";
-// import mainLogo from "../images/herLogo-removebg-preview.svg";
+import herLogo from "../images/herLogo.png";
 
 import CheckWindowWidth from "../functions/checkWindowWidth";
 import { useState } from "react";
@@ -77,7 +76,7 @@ export default function Root() {
           {location.pathname === "/" ? (
             windowWidth < 860 ? (
               <NavLink to="/" onClick={() => setVis(false)}>
-                <img src={mainLogo} alt="mainLogo" />
+                <img src={herLogo} alt="mainLogo" />
               </NavLink>
             ) : (
               <Link
@@ -87,7 +86,7 @@ export default function Root() {
                 }}
                 className="headliner"
               >
-                <h1>H.E.R. Ministries</h1>
+                <h1>I’m H.E.R, Inc.</h1>
               </Link>
             )
           ) : (
@@ -98,7 +97,7 @@ export default function Root() {
               }}
               className="headliner"
             >
-              <h1>H.E.R. Ministries</h1>
+              <h1>I’m H.E.R, Inc.</h1>
             </Link>
           )}
         </>
@@ -186,7 +185,7 @@ export default function Root() {
         </a>
         {/* {location.pathname == "/episodes" ? <Link>Upload</Link> : null} */}
         <span>
-          © {date.getFullYear()} H.E.R. Ministries. All Rights Reserved.
+          © {date.getFullYear()} I’m H.E.R, Inc.. All Rights Reserved.
         </span>
       </footer>
     </>

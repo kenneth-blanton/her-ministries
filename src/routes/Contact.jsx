@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/contact.css";
-import prayerBanner from "../images/prayerBanner.webp";
 import { db } from "../db/firebase";
 import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 

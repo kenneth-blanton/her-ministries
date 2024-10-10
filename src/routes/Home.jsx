@@ -1,13 +1,12 @@
 import noBack from "../images/homeHeadshot-removebg-preview.png";
-// import noBackLogo from "../images/herLogo-removebg-preview.png";
-import noBackLogo from "../images/herLogo-removebg-preview.svg";
-import { useEffect, useState, useRef } from "react";
-import { NavLink, useLocation, useNavigate, Link } from "react-router-dom";
+import herLogo from "../images/herLogo.png";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const [imgIndex, setImgIndex] = useState(0);
 
-  const images = [noBack, noBackLogo];
+  const images = [noBack, herLogo];
 
   var myopacity = 0;
 
@@ -35,10 +34,9 @@ const Home = () => {
 
   return (
     <div className="homePage">
-      {/* <img src={herLogo} alt="herLogo" className="herLogoHome" /> */}
       <div className="aboveFold">
         <div className="aboveFoldWords">
-          <h3>H.E.R. Ministries: A Healing Haven for Women</h3>
+          <h3>I’m H.E.R, Inc. A Healing Haven for Women</h3>
           <p>
             Providing a safe and supportive environment for women to heal from
             past trauma, discover their true identity in Christ, and walk in the
