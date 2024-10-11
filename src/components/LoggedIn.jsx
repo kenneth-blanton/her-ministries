@@ -3,6 +3,7 @@ import CreateEpisode from "./createEpisode";
 import CreateItem from "./createItem";
 import CreateEvent from "./createEvent";
 import EditAbout from "./EditAbout";
+import EditFounder from "./EditFounder";
 
 export default function LoggedIn() {
   const [mode, setMode] = useState(0);
@@ -15,6 +16,7 @@ export default function LoggedIn() {
     { header: "Items", component: <CreateItem /> },
     { header: "Events", component: <CreateEvent /> },
     { header: "About Page", component: <EditAbout /> },
+    { header: "Edit Founder", component: <EditFounder /> },
   ];
 
   function goBack() {
